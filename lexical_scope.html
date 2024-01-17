@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Lexical scope and closer</h2>
+
+    <button id="orange">Orange</button>
+    <button id="green">Green</button>
+
+</body>
+<script>
+
+    function outer(){
+        let username = "Niraj"
+        function inner(){
+            console.log("inner", username)
+        }
+        function innerTwo(){
+            console.log("innerTwo", username)
+        }
+        inner()
+        innerTwo()
+    }
+    outer()
+    // console.log("Outer", username)
+</script>
+<script>
+
+
+// document.getElementById("orange").onclick= function(){
+//     document.body.style.backgroundColor='orange'
+// }
+// document.getElementById("green").onclick= function(){
+//     document.body.style.backgroundColor='green'
+// }
+
+function clickHandler(color){
+
+return function(){
+document.body.style.backgroundColor = `${color}`
+}
+}
+
+document.getElementById('orange').onclick = clickHandler("orange")
+document.getElementById('green').onclick = clickHandler("green")
+
+</script>
+
+
+
+</html>

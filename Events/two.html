@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>chai aur code</h1>
+    <button id="stop">Button</button>
+</body>
+
+
+<script>
+
+    // setTimeout(function(){
+    //     console.log("Tulika")
+    // },2000)
+
+    const sayAnkit = function(){
+        console.log("Ankit")
+    }
+
+    // setTimeout(sayAnkit, 2000)
+
+    const changeText = function(){
+        document.querySelector('h1').
+        innerHTML="Best javascript series"
+    }
+    // setTimeout(changeText, 2000)
+
+    const changeME = setTimeout(changeText,2000)
+    document.querySelector('#stop').
+    addEventListener('click',function(){
+        clearTimeout(changeME)
+        console.log("STOPPED");
+    })
+
+</script>
+</html>

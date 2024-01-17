@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul class="language">
+     <li>javascript</li>
+    </ul>
+</body>
+
+<script>
+
+    // function addLanguage(LangName){
+    //     const li = document.createElement('li');
+    //     li.innerHTML = `${LangName}`
+    //     document.querySelector('.language').appendChild(li)
+    // }
+    // addLanguage("python")
+    // addLanguage("typescript")
+
+
+    function addOptiLanguage(LangName){
+       const li = document.createElement('li')
+
+    //    const node = document.createTextNode(LangName)
+    //    li.appendChild(node);
+          
+        li.appendChild(document.createTextNode(LangName));
+
+
+       document.querySelector('.language').appendChild(li)
+    }   
+
+    addOptiLanguage('golang')
+    addOptiLanguage('Reactjs')
+    addOptiLanguage('nodejs')
+    addOptiLanguage('springboot')
+
+    // Edit
+
+    const secondLang = document.querySelector("li:nth-child(2)")
+    // console.log(secondLang);
+    // secondLang.innerHTML="Mojo"
+    const newli = document.createElement('li')
+    newli.textContent = "jquery"
+    secondLang.replaceWith(newli)
+
+    // Edit
+
+    // const firstlang = document.querySelector("li:first-child")
+    // firstlang.outerHTML='<li>TypeScript</li>'
+    // console.log(firstlang)
+
+    const firstlang = document.querySelector("li:first-child")
+    firstlang.outerHTML ='<li>Typescript</li>'
+
+    // remove
+
+    const lastLang = document.querySelector('li:last-child')
+    lastLang.remove()
+
+
+
+
+
+</script>
+
+</html>
